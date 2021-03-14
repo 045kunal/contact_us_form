@@ -1,0 +1,29 @@
+
+.container{
+    display: block; 
+    margin:130px auto; 
+    width: 30%; 
+    height:65%; 
+    border:1px solid black;
+    border-radius:10px;
+}
+.itms{
+    font-size:16px;
+    font-family:Arial;
+    margin:10px;
+}
+h1{
+    font-size:40px;
+    font-weight:bold;
+    width:350px;
+    text-align:center;
+}
+#forms{
+    width:250px;
+    height:350px;
+}
+.mid{
+    display:block;
+    width:35%;
+    margin:auto;
+}

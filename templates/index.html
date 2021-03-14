@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Contact Form{% endblock %}
+{% block st %}
+body{
+    background:url('static/bg1.jpg') no-repeat center/cover;
+    color:#000;
+}
+{% endblock %}
+{% block page_content %}
+<div class="container">
+<form method="POST" id ="forms">
+    {{ form.hidden_tag() }}
+    <h1>Contact Us</h1>
+    <div class="mid">
+    <div class="itms">
+    {{ form.name.label }}<br>{{ form.name()}}
+    </div>
+    <div class="itms">
+    {{ form.email.label }}<br>{{ form.email() }}
+</div>
+<div class="itms">
+    {{ form.subject.label }}<br>{{ form.subject() }}
+</div>
+<div class="itms">
+    {{ form.message.label }}<br>{{ form.message() }}
+</div>
+<div class="itms">
+    {{ form.submit() }}
+</div>
+</div>
+</form>
+</div>
+{% endblock %}

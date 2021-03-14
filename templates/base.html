@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+          {% block title %}       {% endblock %}
+        </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+        <style>
+          {% block st %}  {% endblock %}
+        </style>
+    </head>
+    <body>
+    {% block content %}
+		<div class="margin">
+			{% for msg in get_flashed_messages() %}
+				<div class="alert alert-color" id="msgm" style="display: block; width: 200px; margin: auto;">
+					<button type="button" class="close" data-dismiss="alert" onclick="document.getElementById('msgm').style.visibility='hidden'">x</button>
+					{{msg}}
+				</div>
+			{% endfor %}
+			{% block page_content %}{% endblock %}
+		</div>
+		{% endblock %}
+    </body>
+</html>
